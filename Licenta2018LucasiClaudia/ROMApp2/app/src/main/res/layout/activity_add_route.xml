@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/parent_linear_layout">
+
+                    <!--  Title Label -->
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:textColorHint="#585858">
+                        <EditText
+                            android:id="@+id/title_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/gradient"
+                            android:backgroundTint="#2a00ffb2"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:textColor="#1e1e1e"
+                            android:hint="Title"
+                            android:inputType="text"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--  Description Label -->
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:textColorHint="#585858">
+                        <EditText
+                            android:id="@+id/description_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="95dp"
+                            android:background="@drawable/gradient"
+                            android:backgroundTint="#2a00ffb2"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:maxLines="10"
+                            android:lines="10"
+                            android:textColor="#1e1e1e"
+                            android:hint="Description"
+                            android:inputType="textMultiLine|textLongMessage"
+                            android:scrollbars="vertical"
+                            android:scrollIndicators="right"/>
+                    </android.support.design.widget.TextInputLayout>
+                    </ScrollView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Route Points"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:id="@+id/add_new_field"
+                        android:layout_width="40dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/gradient"
+                        android:backgroundTint="@color/primary"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="50dp"
+                        android:text=" + "
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/accent"
+                        android:onClick="onAddField"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Pictures"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp">
+
+                       <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/firstPhoto"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/add"
+                        android:layout_marginRight="20dp"/>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/secondPhoto"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/add"
+                            android:layout_marginRight="20dp"/>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/thirdPhoto"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/add" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/addRoute"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="90dp"
+                        android:background="@drawable/gradient"
+                        android:backgroundTint="@color/primary_dark"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="Add route"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"
+                        android:onClick="onAddRoute"/>
+                </LinearLayout>
+    </ScrollView>
